@@ -7,8 +7,8 @@ public class TestRectangulo {
 		Rectangulo r2=new Rectangulo();
 		int area;
 		int areaR2;
-		int perimetro1;
-		int perimetro2;
+		double perimetro1;
+		double perimetro2;
 		
 		r1.base=10;
 		r1.altura=5;
