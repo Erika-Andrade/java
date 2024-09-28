@@ -7,23 +7,23 @@ public class TestAuto {
 		Auto auto1=new Auto();
 		Auto auto2=new Auto();
 		//modificar atributos auto1
-		auto1.marca="Ford Mustang GT";
-		auto1.anio=2012;
-		auto1.precio=26000.00;
+		auto1.setMarca("Ford Mustang GT");
+		auto1.setAnio(2012);
+		auto1.setPrecio(26000.00);
 		//modificar atributos auto2
-		auto2.marca="Nissan GT-R";
-		auto2.anio=2023;
-		auto2.precio=113000.00;
+		auto2.setMarca("Nissan GT-R");
+		auto2.setAnio(2023);
+		auto2.setPrecio(113000.00);
 		//mostrar valores atributos auto1
 		System.out.println("-------Auto 1------");
-		System.out.println("marca: "+auto1.marca);
-		System.out.println("anio: "+auto1.anio);
-		System.out.println("precio: "+auto1.precio);
+		System.out.println("marca: "+auto1.getMarca());
+		System.out.println("anio: "+auto1.getAnio());
+		System.out.println("precio: "+auto1.getPrecio());
 		//mostrar valores atributos auto2
 		System.out.println("-------Auto 2------");
-		System.out.println("marca: "+auto2.marca);
-		System.out.println("anio: "+auto2.anio);
-		System.out.println("precio: "+auto2.precio);
+		System.out.println("marca: "+auto2.getMarca());
+		System.out.println("anio: "+auto2.getAnio());
+		System.out.println("precio: "+auto2.getPrecio());
 		
 	}
 
