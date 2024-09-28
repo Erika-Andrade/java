@@ -15,9 +15,9 @@ public class TestCuadrado {
 		double peri3;
 		
 		//2.Modificar valores
-		cua1.lado=3;
-		cua2.lado=4;
-		cua3.lado=5;
+		cua1.setLado(3);
+		cua2.setLado(4);
+		cua3.setLado(5);
 		//testear funciones area
 		area1=cua1.calcularArea();
 		area2=cua2.calcularArea();
