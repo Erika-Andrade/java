@@ -29,6 +29,15 @@ public class TestCuentas {
 		cuenta2.imprimir();
 		cuenta3.imprimir();
 		
+		//-------Creacion cuenta4,cuentas5,cuenta6
+		Cuentas cuenta4=new Cuentas("0987","A",10);
+		Cuentas cuenta5=new Cuentas("0557","C",10);
+		Cuentas cuenta6=new Cuentas("0666");
+		//Imprimir cuenta4,cuenta5,cuenta6
+		System.out.println("--------------------");
+		cuenta4.imprimiConMiEstilo();
+		cuenta5.imprimiConMiEstilo();
+		cuenta6.imprimiConMiEstilo();		
 
 	}
 
