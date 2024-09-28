@@ -2,6 +2,10 @@ package com.krakedev;
 
 public class Cuadrado {
 	private int lado;
+	
+	public Cuadrado(int lado){
+		this.lado=lado;
+	}
 	//---getter and setter
 	public int getLado() {
 		return lado;
