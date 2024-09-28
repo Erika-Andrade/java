@@ -15,7 +15,6 @@ public class Cuentas {
 		this.saldo=saldo;
 	}
 	
-	
 	//--getters and setter
 	public String getTipo() {
 		return tipo;
@@ -31,6 +30,24 @@ public class Cuentas {
 	}
 	public String getId() {
 		return id;
+	}
+	//metodos
+	public void imprimir() {
+		System.out.println("********************");
+		System.out.println("CUENTA");
+		System.out.println("********************");
+		System.out.println("Número de Cuenta: "+id);
+		System.out.println("Tipo: "+tipo);
+		System.out.println("Saldo: USD "+saldo);
+		System.out.println("********************");
+	}
+	public void imprimiConMiEstilo() {
+		System.out.println("----------CUENTA----------");
+		System.out.println("Número de Cuenta: "+id);
+		System.out.println("Tipo: "+tipo);
+		System.out.println("Saldo: USD "+saldo);
+		System.out.println("--------------------------");
+		
 	}
 	
 }
