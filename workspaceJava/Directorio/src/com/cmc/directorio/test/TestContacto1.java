@@ -9,7 +9,6 @@ public class TestContacto1 {
 		Contacto c=new Contacto("Alejandra","Pizarnik",telf,48.9);
 		System.out.println(c.getNombre()+" "+c.getApellido()+" "
 		+c.getPeso()+" "+telf.getOperadora()+" "+telf.getNombre());
-
 	}
 
 }
