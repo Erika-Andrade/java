@@ -40,30 +40,44 @@ public class MaquinaDulces {
 		celdaRecuperada.ingresarProducto(prod, cantidad);
 	}
 	public void mostrarProductos() {
+		System.out.println("*****CELDA "+celda1.getCodigo());
+		System.out.println("Stock: "+celda1.getStock());
+		if(celda1.getProducto()!=null) {
+			System.out.println("Nombre Producto: "+celda1.getProducto().getNombre());
+			System.out.println("Precio Producto: "+celda1.getProducto().getPrecio());
+		}else {
+			System.out.println("La celda no tiene producto!");
+		}
+		
+		
+		System.out.println("*****CELDA "+celda2.getCodigo());
+		System.out.println("Stock: "+celda2.getStock());
+		if(celda2.getProducto()!=null) {
+			System.out.println("Nombre Producto: "+celda2.getProducto().getNombre());
+			System.out.println("Precio Producto: "+celda2.getProducto().getPrecio());
+		}else {
+			System.out.println("La celda no tiene producto!");
+		}
+		
+		System.out.println("*****CELDA "+celda3.getCodigo());
+		System.out.println("Stock: "+celda3.getStock());
+		if(celda3.getProducto()!=null) {
+			System.out.println("Nombre Producto: "+celda3.getProducto().getNombre());
+			System.out.println("Precio Producto: "+celda3.getProducto().getPrecio());
+		}else {
+			System.out.println("La celda no tiene producto!");
+		}
+		
+		System.out.println("*****CELDA "+celda4.getCodigo());
+		System.out.println("Stock: "+celda4.getStock());
+		if(celda4.getProducto()!=null) {
+			System.out.println("Nombre Producto: "+celda4.getProducto().getNombre());
+			System.out.println("Precio Producto: "+celda4.getProducto().getPrecio());
+		}else {
+			System.out.println("La celda no tiene producto!");
+		}
 		System.out.println("SALDO: "+saldo);
-		System.out.println("CELDA 1");
-		System.out.println("Codigo: "+celda1.getCodigo());
-		System.out.println("Stock Actual: "+celda1.getStock());
-		System.out.println("Nombre: "+celda1.getProducto().getNombre());
-		System.out.println("Precio: "+celda1.getProducto().getPrecio());
 		
-		System.out.println("CELDA 2");
-		System.out.println("Codigo: "+celda2.getCodigo());
-		System.out.println("Stock Actual: "+celda2.getStock());
-		System.out.println("Nombre: "+celda2.getProducto().getNombre());
-		System.out.println("Precio: "+celda2.getProducto().getPrecio());
-		
-		System.out.println("CELDA 3");
-		System.out.println("Codigo: "+celda3.getCodigo());
-		System.out.println("Stock Actual: "+celda3.getStock());
-		System.out.println("Nombre: "+celda3.getProducto().getNombre());
-		System.out.println("Precio: "+celda3.getProducto().getPrecio());
-		
-		System.out.println("CELDA 4");
-		System.out.println("Codigo: "+celda4.getCodigo());
-		System.out.println("Stock Actual: "+celda4.getStock());
-		System.out.println("Nombre: "+celda4.getProducto().getNombre());
-		System.out.println("Precio: "+celda4.getProducto().getPrecio());
 	}
 	public Producto buscarProductoEnCelda(String cod) {
 		Celda celdaRecuperada=buscarCelda(cod);
