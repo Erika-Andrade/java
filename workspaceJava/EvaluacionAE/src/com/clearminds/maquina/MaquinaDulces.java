@@ -45,6 +45,7 @@ public class MaquinaDulces {
 		if(celda1.getProducto()!=null) {
 			System.out.println("Nombre Producto: "+celda1.getProducto().getNombre());
 			System.out.println("Precio Producto: "+celda1.getProducto().getPrecio());
+			System.out.println("Codigo Producto: "+celda1.getProducto().getCodigo());
 		}else {
 			System.out.println("La celda no tiene producto!");
 		}
@@ -55,6 +56,7 @@ public class MaquinaDulces {
 		if(celda2.getProducto()!=null) {
 			System.out.println("Nombre Producto: "+celda2.getProducto().getNombre());
 			System.out.println("Precio Producto: "+celda2.getProducto().getPrecio());
+			System.out.println("Codigo Producto: "+celda2.getProducto().getCodigo());
 		}else {
 			System.out.println("La celda no tiene producto!");
 		}
@@ -64,6 +66,7 @@ public class MaquinaDulces {
 		if(celda3.getProducto()!=null) {
 			System.out.println("Nombre Producto: "+celda3.getProducto().getNombre());
 			System.out.println("Precio Producto: "+celda3.getProducto().getPrecio());
+			System.out.println("Codigo Producto: "+celda3.getProducto().getCodigo());
 		}else {
 			System.out.println("La celda no tiene producto!");
 		}
@@ -73,6 +76,7 @@ public class MaquinaDulces {
 		if(celda4.getProducto()!=null) {
 			System.out.println("Nombre Producto: "+celda4.getProducto().getNombre());
 			System.out.println("Precio Producto: "+celda4.getProducto().getPrecio());
+			System.out.println("Codigo Producto: "+celda4.getProducto().getCodigo());
 		}else {
 			System.out.println("La celda no tiene producto!");
 		}
@@ -92,17 +96,28 @@ public class MaquinaDulces {
 		return prodRecu.getPrecio();
 	}
 	public Celda buscarCeldaProducto(String cod) {
-		if(cod==celda1.getProducto().getCodigo()) {
-			return celda1;
-		}else if(cod==celda2.getProducto().getCodigo()) {
-			return celda2;
-		}else if(cod==celda3.getProducto().getCodigo()) {
-			return celda3;
-		}else if(cod==celda4.getProducto().getCodigo()) {
-			return celda4;
+		Celda celdaRetorno=new Celda(" ");
+		if(celda1.getProducto()!=null) {
+			if(cod==(celda1.getProducto().getCodigo())) {
+				celdaRetorno=celda1;
+			}
+		}else if(celda2.getProducto()!=null) {
+			if(cod==celda2.getProducto().getCodigo()) {
+				celdaRetorno=celda2;
+			}
+		}else if(celda3.getProducto()!=null) {
+			if(cod==celda3.getProducto().getCodigo()) {
+				celdaRetorno=celda3;
+			}
+		}else if(celda4.getProducto()!=null) {
+			 if(cod==celda4.getProducto().getCodigo()) {
+				 celdaRetorno=celda4;
+			 }
 		}else {
-			return null;
+			celdaRetorno=null;
 		}
+		return celdaRetorno;
+		
 	}
 	public void incrementarProductos(String codProd, int cantidad) {
 		Celda celdaEncontrada=buscarCeldaProducto(codProd);
