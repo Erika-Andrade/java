@@ -70,4 +70,19 @@ public class MaquinaDulces {
 			
 		}
 	}
+	public Producto buscarProductoEnCelda(String codigo) {
+		Celda celdaEncontrada=null;
+		Celda elemento=null;
+		Producto productoEn=null;
+		for(int i=0;i<celdas.size();i++) {
+			elemento=celdas.get(i);
+			if(elemento.getCodigo().equals(codigo)) {
+				celdaEncontrada=elemento;
+			}
+		}
+		if(celdaEncontrada!=null) {
+			productoEn=celdaEncontrada.getProducto();
+		}
+		return productoEn;
+	}
 }
