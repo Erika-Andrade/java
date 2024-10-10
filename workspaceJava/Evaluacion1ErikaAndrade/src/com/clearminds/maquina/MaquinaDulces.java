@@ -85,4 +85,14 @@ public class MaquinaDulces {
 		}
 		return productoEn;
 	}
+	public double consultarPrecio(String codigo) {
+		Producto productoEnc=buscarProductoEnCelda(codigo);
+		double precio;
+		if(productoEnc!=null){
+			precio=productoEnc.getPrecio();
+		}else {
+			precio=0.0;
+		}
+		return precio;
+	}
 }
