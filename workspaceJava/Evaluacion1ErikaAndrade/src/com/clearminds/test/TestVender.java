@@ -19,9 +19,12 @@ public class TestVender {
 		Producto producto2=new Producto("D456","Doritos",0.70);
 		maquina.cargarProducto(producto2, "A1", 6);
 		
+		Producto producto3=new Producto("EI44","Cafe",1.89);
+		maquina.cargarProducto(producto2, "B2", 9);
+		
 		maquina.vender("A1");
 		maquina.vender("B1");
-		
+		maquina.vender("B2");
 		maquina.mostrarProductos();
 
 	}
