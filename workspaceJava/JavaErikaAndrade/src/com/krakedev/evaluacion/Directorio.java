@@ -9,8 +9,19 @@ public class Directorio {
 	private Date fechaModificacion;
 	
 	public boolean agregarContacto(Contacto contacto) {
-		contactos.add(contacto);
-		return true;
+		boolean existe=false;
+		boolean agregaNuevo=false;
+		for(int i=0;i<this.contactos.size();i++) {
+			if(contacto.getCedula().equals(contactos.get(i).getCedula())){
+				existe=true;
+				break;
+			}
+		}
+		if(existe==false) {
+			contactos.add(contacto);
+			agregaNuevo=true;
+		}
+		return agregaNuevo;
 	}
 	public Contacto buscarPorCedula(String cedula) {
 		Contacto contactoEnc=null;
