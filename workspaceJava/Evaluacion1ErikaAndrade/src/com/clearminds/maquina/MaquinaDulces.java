@@ -125,4 +125,11 @@ public class MaquinaDulces {
 			saldo+=celdaEncontrada.getProducto().getPrecio();
 		}
 	}
+	public double venderConCambio(String codigo, double valor) {
+		Celda celdaEncontrada=buscarCelda(codigo);
+		double precio=celdaEncontrada.getProducto().getPrecio();
+		celdaEncontrada.setStock(celdaEncontrada.getStock()-1);
+		saldo+=precio;
+		return valor-precio;
+	}
 }
