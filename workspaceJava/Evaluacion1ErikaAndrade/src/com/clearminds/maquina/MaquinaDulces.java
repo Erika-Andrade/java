@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.clearminds.componentes.Celda;
 import com.clearminds.componentes.Producto;
 
+
 public class MaquinaDulces {
 	private ArrayList<Celda> celdas;
 	private double saldo;
@@ -131,5 +132,16 @@ public class MaquinaDulces {
 		celdaEncontrada.setStock(celdaEncontrada.getStock()-1);
 		saldo+=precio;
 		return valor-precio;
+	}
+	public ArrayList<Producto> buscarMenores(double limite){
+		ArrayList<Producto> menores=new ArrayList<Producto>();
+		Producto elementoProducto=null;
+		for(int i=0;i<celdas.size();i++) {
+			elementoProducto=celdas.get(i).getProducto();
+			if(elementoProducto.getPrecio()<=limite) {
+				menores.add(elementoProducto);
+			}
+		}
+		return menores;
 	}
 }
