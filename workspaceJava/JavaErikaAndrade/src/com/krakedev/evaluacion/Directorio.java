@@ -1,12 +1,14 @@
 package com.krakedev.evaluacion;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
 
+
 public class Directorio {
 	private ArrayList<Contacto> contactos=new ArrayList<Contacto>();
-	private Date fechaModificacion=new Date();
+	private Date fechaModificacion;
 	
 	public boolean agregarContacto(Contacto contacto) {
 		boolean existe=false;
@@ -20,7 +22,7 @@ public class Directorio {
 		if(existe==false) {
 			contactos.add(contacto);
 			agregaNuevo=true;
-			//agregar fecha 
+			fechaModificacion=new Date();
 		}
 		return agregaNuevo;
 	}
@@ -35,8 +37,8 @@ public class Directorio {
 		return contactoEnc;
 	}
 	public String consultarUltimaModificacion() {
-		//Date fecha=this.fechaModificacion.getDate();
-		return " ";
+		SimpleDateFormat formatoFecha = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        return formatoFecha.format(fechaModificacion);
 	}
 	public int contarPerdidos() {
 		int conta=0;
