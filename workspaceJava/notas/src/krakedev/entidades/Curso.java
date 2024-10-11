@@ -41,11 +41,18 @@ public class Curso {
 		return promTotal/estudiantes.size();
 	}
 	public void mostrar() {
-		Estudiante estudiante;
-		for(int i=0;i<estudiantes.size();i++) {
-			estudiante=estudiantes.get(i);
-			System.out.println("Nombre: "+estudiante.getNombre()+" ,Apellido: "+estudiante.getApellido()
-					+" ,Cedula:"+estudiante.getCedula()+" ,Materia: "+estudiante.getNotas()+" ,Calificación: "+estudiante.getNotas());
+		Estudiante elementoEstudiante = null;
+		for (int i = 0; i < estudiantes.size(); i++) {
+			elementoEstudiante = estudiantes.get(i);
+			System.out.println("Estudiante [ Nombre: " + elementoEstudiante.getNombre() + ", Apellido: "
+					+ elementoEstudiante.getApellido() + ", Cedula: " + elementoEstudiante.getCedula() + " ]");
+			Nota elementoNota = null;
+			for (int j = 0; j < elementoEstudiante.getNotas().size(); j++) {
+				elementoNota = elementoEstudiante.getNotas().get(j);
+				System.out.println("Materia: " + elementoNota.getMateria().getNombre() + " Calificacion: "
+						+ elementoNota.getCalificacion());
+			}
 		}
 	}
+	
 }

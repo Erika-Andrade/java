@@ -51,7 +51,7 @@ public class Estudiante {
 					
 				}
 		}
-		if(!notaExiste && nuevaNota.getCalificacion()>=0 && nuevaNota.getCalificacion()<=0) {
+		if(!notaExiste && nuevaNota.getCalificacion()>=0 && nuevaNota.getCalificacion()<=10) {
 			notas.add(nuevaNota);
 		}
 	}
