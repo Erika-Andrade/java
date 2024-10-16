@@ -3,7 +3,7 @@ package com.krakedev.entidades;
 import java.util.ArrayList;
 
 public class Naipe {
-	private ArrayList<Carta> cartas;
+	private ArrayList<Carta> cartas=new ArrayList<Carta>() ;
 	private ArrayList<Numero> numerosPosibles;
 	//constructor
 	public Naipe() {
@@ -34,6 +34,27 @@ public class Naipe {
 	//getter
 	public ArrayList<Carta> getCartas() {
 		return cartas;
+	}
+	//metodo
+	public ArrayList<Carta> barajar(){
+		int posicion;
+		Carta cartaPos;
+		ArrayList<Carta> auxiliar=new ArrayList<Carta>();
+		for(int i=1;i<101;i++) {
+			posicion=Random.obtenerPosicion();
+			cartaPos=cartas.get(posicion);
+			if(cartaPos.getEstado().equals("N")) {
+				auxiliar.add(cartaPos);
+				cartaPos.setEstado("C");
+			}
+		}
+		for(int x=0;x<cartas.size();x++) {
+			if(cartas.get(x).getEstado().equals("N")) {
+				auxiliar.add(cartas.get(x));
+				cartas.get(x).setEstado("C");
+			}
+		}
+		return auxiliar;
 	}
 	
 	

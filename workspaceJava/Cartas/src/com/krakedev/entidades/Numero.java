@@ -9,9 +9,15 @@ public class Numero {
 		this.valor = valor;
 	}
 	//getters and setters
+	
 	public String getNumeroCarta() {
 		return numeroCarta;
 	}
+	@Override
+	public String toString() {
+		return "Numero [numeroCarta=" + numeroCarta + ", valor=" + valor + "]";
+	}
+
 	public int getValor() {
 		return valor;
 	}

@@ -1,7 +1,7 @@
-package com.test;
+package com.krakedev.test;
 
-import com.servicios.Juego;
-import com.entidades.Jugadores;
+import com.krakedev.servicios.Juego;
+import com.krakedev.entidades.Jugadores;
 import java.util.ArrayList;
 
 public class TestGanador {
@@ -23,7 +23,7 @@ public class TestGanador {
             System.out.println("Total del jugador " + (i + 1) + ": " + total);
         }
 
-        String ganador = juego.determinarGanador();
+        String ganador =juego.determinarGanador();
         System.out.println("El ganador es: " + ganador);
     }
 }
