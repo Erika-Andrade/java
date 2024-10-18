@@ -3,8 +3,8 @@ package com.entidades;
 import java.util.ArrayList;
 
 public class Naipe {
-	private ArrayList<Numero> numerosPosibles;
-	private  ArrayList<Carta> cartas;
+	private ArrayList<Numero> numerosPosibles=new ArrayList<Numero>();
+	private  ArrayList<Carta> cartas=new ArrayList<Carta>();
 	//constructor
 	public Naipe() {
 		Palos palos=new Palos();
@@ -32,6 +32,22 @@ public class Naipe {
 	public ArrayList<Carta> getCartas() {
 		return cartas;
 	}
-	
+	public ArrayList<Carta> barajar(){
+		ArrayList<Carta> auxiliar=new ArrayList<Carta>();
+		for(int i=1;i<101;i++) {
+			int posicion=Random.obtenerPosicion();
+			if(cartas.get(posicion).getEstado().equals("N")) {
+				auxiliar.add(cartas.get(posicion));
+				cartas.get(posicion).setEstado("C");
+			}
+		}
+		for(int i=0;i<cartas.size();i++) {
+			if(cartas.get(i).getEstado().equals("N")) {
+				auxiliar.add(cartas.get(i));
+				cartas.get(i).setEstado("C");
+			}
+		}
+		return auxiliar;
+	}
 	
 }

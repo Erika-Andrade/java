@@ -1,6 +1,6 @@
-package com.krakedev.test;
+package com.test;
 
-import com.krakedev.entidades.Random;
+import com.entidades.Random;
 
 public class TestRandom {
 

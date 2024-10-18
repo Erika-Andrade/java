@@ -1,4 +1,4 @@
-package com.krakedev.entidades;
+package com.entidades;
 
 public class Random {
 	public static int obtenerPosicion() {
