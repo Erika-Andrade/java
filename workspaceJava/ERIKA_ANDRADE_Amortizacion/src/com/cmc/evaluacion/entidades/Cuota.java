@@ -1,6 +1,9 @@
 package com.cmc.evaluacion.entidades;
 
+import java.util.ArrayList;
+
 import com.cmc.evaluacion.servicios.Utilitario;
+
 
 public class Cuota {
 	private int numero;
@@ -10,6 +13,7 @@ public class Cuota {
 	private double interes;
 	private double abonoCapital;
 	private double saldo;
+	
 	//constructor
 	public Cuota(int numero) {
 		this.numero = numero;
@@ -56,9 +60,12 @@ public class Cuota {
 	//metodos**********
 	public void mostrarPrestamo() {
 		cuota=Utilitario.redondear(cuota);
+		inicio=Utilitario.redondear(inicio);
+		interes=Utilitario.redondear(interes);
 		abonoCapital=Utilitario.redondear(abonoCapital);
+		saldo=Utilitario.redondear(saldo);
 		
-		System.out.println("1| "+cuota+"|"+capital+" |"+interes+"| "+abonoCapital+"| "+saldo);
+		System.out.println(numero+"    | "+cuota+"   |"+inicio+"     |"+interes+"      | "+abonoCapital+"    | "+saldo);
 	}
 	
 }
