@@ -31,7 +31,8 @@ public class Cliente {
 	}
 	//metodos
 	public void mostrarCliente() {
-		System.out.println("Cliente registrado: "+nombre+" "+apellido+"[Cedula= "+cedula+", nombre="+nombre+" ,apellido="+apellido+"]");
+		System.out.println("\nCliente registrado:"+nombre+" "+apellido);
+		//System.out.println("Cliente registrado: "+nombre+" "+apellido+"[Cedula= "+cedula+", nombre="+nombre+" ,apellido="+apellido+"]");
 	}
 	
 }

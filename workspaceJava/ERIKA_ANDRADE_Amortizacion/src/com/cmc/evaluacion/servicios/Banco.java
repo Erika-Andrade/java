@@ -34,4 +34,24 @@ public class Banco {
 			System.out.println("Cliente ya existe: "+clienteARegis.getCedula());
 		}
 	}
+	public void asignarPrestamo(String cedula, Prestamo prestamo) {
+		if(buscarCliente(cedula)==null) {
+			System.out.println("No es cliente del banco");
+		}else {
+			prestamos.add(new Prestamo(prestamo.getMonto(),prestamo.getInteres(),prestamo.getPlazo(),cedula));
+			CalculadoraAmortizacion.generarTabla(prestamo);
+		}
+	}
+	public ArrayList<Prestamo> buscarPrestamos(String cedula){
+		ArrayList<Prestamo> prestamosCliente=new ArrayList<Prestamo>();
+		for(int i=0;i<prestamos.size();i++) {
+			if(buscarCliente(cedula)!=null) {
+				if(cedula.equals(prestamos.get(i).getCedulaCliente())) {
+					prestamosCliente.add(prestamos.get(i));
+				}
+				
+			}
+		}
+		return prestamosCliente;
+	}
 }
